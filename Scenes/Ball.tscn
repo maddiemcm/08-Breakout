@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Ball.gd" type="Script" id=1]
+[ext_resource path="res://Assets/MrCrabs.png" type="Texture" id=2]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 45.4999, 29.5 )
+
+[node name="Ball" type="RigidBody2D"]
+position = Vector2( 546, 457.5 )
+mode = 2
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+linear_velocity = Vector2( 200, -200 )
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 4.45013, -7.75012 )
+scale = Vector2( 0.489911, 0.48259 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.00006, -6.10352e-005 )
+shape = SubResource( 4 )
