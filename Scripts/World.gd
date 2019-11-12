@@ -6,6 +6,8 @@ export var lives = 3
 func increase_score(s):
 	score += int(s)
 	find_node("Score").update_score()
+	if score >= 1050:
+		get_tree().change_scene("res://Scenes/End.tscn")
 
 func decrease_lives():
 	lives -= 1

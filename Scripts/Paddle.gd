@@ -17,4 +17,3 @@ func _input(event):
 			ball.name = "Ball"
 			ball.linear_velocity = Vector2(200, -200)
 			get_parent().add_child(ball)
-	
